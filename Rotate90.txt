@@ -1,0 +1,58 @@
+From:  Ulrich von Zadow <u.zadow@g...> 
+Date:  Wed Apr 17, 2002  3:46 am
+Subject:  Re: [paintlib] Rotate Function?
+
+ 
+ADVERTISEMENT
+ 
+ 
+
+Yes, PLFilterRotate was removed because it produced extremely low-quality
+(nearest-neighbor) rotates. Also, in the case of 90-degree rotates, it changed
+the size of the bitmap by one pixel...
+
+Writing a rotate-by-90-degrees function isn't hard. Here's the apply
+function of a PLFilterRotate90:
+
+void PLFilterRotate90::Apply(PLBmp * pBmpSource, PLBmp * pBmpDest) const
+{
+// Only works for 32 bpp.
+PLASSERT (pBmpSource->GetBitsPerPixel() == 32);
+
+int oldWidth = pBmpSource->GetWidth();
+int oldHeight= pBmpSource->GetHeight();
+int newWidth = oldHeight;
+int newHeight = oldWidth;
+
+// Calculate the size of the new bitmap
+pBmpDest->Create (newWidth, newHeight, pBmpSource->GetBitsPerPixel(), 
+pBmpSource->HasAlpha(), pBmpSource->GetResolution());
+
+PLPixel32 pix;
+
+pBmpSource->Lock (true, false);
+pBmpDest->Lock (false, true);
+for (int newY = 0; newY<newHeight; ++newY) 
+{
+for (int newX = 0; newX<newWidth; ++newX) 
+{
+int oldX = newY;
+int oldY = oldHeight - newX - 1;
+pix = pBmpSource->GetPixel(oldX,oldY);
+pBmpDest->SetPixel(newX,newY,pix);
+}
+}
+
+pBmpDest->Unlock ();
+pBmpSource->Unlock();
+}
+
+Hth,
+
+Uli
+
+> I need a rotate function for 8 bit images within paintlib (90, 180 and 270
+> degrees will do just fine).
+> 
+> Looks like PLFilterRotate was removed in 2.4 - does anyone have any
+> suggestions regarding a solution? 

@@ -1,0 +1,452 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BackgroundRandomizer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\BackgroundRandomizer.ico"
+IDR_ICON_WORKING        ICON    DISCARDABLE     "res\\icon1.ico"
+IDR_ICON_CHANGE_REQUEST ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_ICON_ROTATE_CLOCK   ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_ICON_ROTATE_COUNTER ICON    DISCARDABLE     "res\\ico00002.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 209, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About Background Randomizer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Background Randomizer v1.0",IDC_STATIC,37,7,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001, 2002 unHUman Software\n                                        Howard Uman",
+                    IDC_STATIC,37,22,164,18
+    DEFPUSHBUTTON   "OK",IDOK,173,7,29,14,WS_GROUP
+    LTEXT           "Web Site:",IDC_STATIC,37,100,32,8
+    LTEXT           "http://www.unhuman.com",IDC_STATIC_WEB_SITE,76,102,84,8,
+                    SS_NOTIFY
+    LTEXT           "Email:",IDC_STATIC,37,109,20,8
+    LTEXT           "human@unhuman.com",IDC_STATIC_EMAIL,76,111,74,8,
+                    SS_NOTIFY
+    LTEXT           "Click here to register with RegNow.com",
+                    IDC_STATIC_REGISTER,42,122,125,8,SS_NOTIFY
+    CTEXT           "** UNREGISTERED COPY - Registration Fee: $8.00 **",
+                    IDC_STATIC,17,155,174,8
+    CONTROL         135,IDC_STATIC_CREDIT_CARDS,"Static",SS_BITMAP | 
+                    SS_NOTIFY,43,131,124,19
+    LTEXT           "Contains paintlib code.\npaintlib is Copyright (c) 1996-2000 Ulrich von Zadow",
+                    IDC_STATIC,37,43,165,20
+    LTEXT           "This software is based in part on the work of the Independent JPEG Group.",
+                    IDC_STATIC,37,64,165,18
+    LTEXT           "Current Screen Mode:",IDC_STATIC,37,86,70,8
+    LTEXT           "Screen Mode",IDC_STATIC_SCREEN_MODE,109,86,93,8
+END
+
+IDD_BACKGROUNDRANDOMIZER_DIALOG DIALOGEX 0, 0, 286, 217
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Background Randomizer Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Enable Background Randomization",
+                    IDC_CHECK_ENABLE_RANDOMIZATION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,7,127,10
+    LISTBOX         IDC_LIST_DIRECTORIES,82,22,152,46,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD,240,22,39,14
+    PUSHBUTTON      "Remove",IDC_BUTTON_REMOVE,240,54,39,14
+    PUSHBUTTON      "Manage Blocked Images",IDC_BUTTON_MANAGE_BLOCKED_IMAGES,
+                    7,73,89,11
+    CONTROL         "Don't Duplicate Images",IDC_CHECK_DONT_DUPLICATE_IMAGES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,88,89,10
+    CONTROL         "Require Displayed Images have Screen Orientation",
+                    IDC_CHECK_MATCH_SCREEN_ORIENTATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,103,177,10
+    CONTROL         "Resize To Desktop Dimensions",
+                    IDC_CHECK_RESIZE_TO_FILL_DESKTOP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,134,115,10
+    CONTROL         "Maintain Aspect Ratio",IDC_CHECK_MAINTAIN_ASPECT_RATIO,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,148,85,10
+    COMBOBOX        IDC_COMBO_ASPECT_RATIO_MODE,106,146,173,79,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "New Background Interval",IDC_STATIC,7,166,82,8
+    COMBOBOX        IDC_COMBO_BACKGROUND_INTERVAL,94,164,102,145,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Done",IDOK,89,196,50,14
+    DEFPUSHBUTTON   "Cancel",ID_CANCEL,145,196,50,14
+    LTEXT           "Directories For Images:",IDC_STATIC,7,22,73,8
+    LTEXT           "(BMP and JPG Only)",IDC_STATIC,7,33,66,8
+    LTEXT           "Rotate Images that do not have Screen Orientation:",
+                    IDC_STATIC,20,117,164,8
+    COMBOBOX        IDC_COMBO_AUTO_ROTATE_TO_MATCH_SCREEN,186,115,93,66,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_REGISTER DIALOGEX 0, 0, 202, 229
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Background Randomizer Registration"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_USERNAME,78,144,108,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LICENSE,78,159,108,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,47,208,50,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON_CANCEL,104,208,50,14
+    LTEXT           "Background Randomizer is shareware. It has a 30 day trial. After 30 days, Background Randomizer will be disabled. In order to re-enable it, you must obtain a registration code.",
+                    IDC_STATIC_EXPIRATION,7,15,192,27
+    LTEXT           "Enter your registration information below:",IDC_STATIC,
+                    7,132,162,9
+    LTEXT           "Name:",IDC_STATIC,32,144,43,11,SS_CENTERIMAGE,
+                    WS_EX_RIGHT
+    LTEXT           "Registration Code:",IDC_STATIC,16,159,59,12,
+                    SS_CENTERIMAGE,WS_EX_RIGHT
+    LTEXT           "Background Randomizer expires in %d days.",
+                    IDC_STATIC_NOTICE,7,4,187,8
+    LTEXT           "Registration costs $8.",IDC_STATIC_REGCOST,7,42,180,10
+    CONTROL         135,IDC_STATIC_REGISTER_CARDS,"Static",SS_BITMAP | 
+                    SS_NOTIFY,38,78,124,19
+    LTEXT           "http://www.unhuman.com",IDC_STATIC_WEBSITE,27,114,84,8,
+                    SS_NOTIFY
+    LTEXT           "Register Now handles Background Randomizer registrations.",
+                    IDC_STATIC,7,54,191,9
+    LTEXT           "Click here to register:",IDC_STATIC_REGISTER,67,69,67,8,
+                    SS_NOTIFY
+    LTEXT           "human@unhuman.com",IDC_STATIC_EMAIL,27,103,75,8,
+                    SS_NOTIFY
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,7,126,
+                    190,1
+    LTEXT           "NOTE:  The best way to enter this information is to cut and paste it from your registration email.  This will ensure accurate entry.",
+                    IDC_STATIC,7,177,187,27
+    LTEXT           "Email",IDC_STATIC,7,103,18,8
+    LTEXT           "if you have any questions.",IDC_STATIC,103,103,83,8
+    LTEXT           "Go to",IDC_STATIC,7,114,18,8
+    LTEXT           "for more details.",IDC_STATIC,113,114,50,8
+END
+
+IDD_DIALOG_BG_RAND_PARENT DIALOG DISCARDABLE  0, 0, 6, 9
+STYLE WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_DIALOG_MANAGE_BLOCKED_IMAGES DIALOG DISCARDABLE  0, 0, 224, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Background Randomizer Blocked Images"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,89,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,123,89,50,14
+    LISTBOX         IDC_LIST_BLOCKED_IMAGES,7,7,144,76,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_STATIC_PREVIEW,"Static",SS_BITMAP | 
+                    SS_CENTERIMAGE,154,7,62,62
+    PUSHBUTTON      "Allow Image Again",IDC_BUTTON_ALLOW_IMAGE_AGAIN,154,70,
+                    63,13
+END
+
+IDD_DIALOG_ADJUST_IMAGE_PROPERTIES DIALOGEX 0, 0, 194, 174
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Adjust Image"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Rotate 90°\nClockwise",IDC_BUTTON_ROTATE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,163,24,24,24
+    PUSHBUTTON      "Mirror",IDC_BUTTON_MIRROR,137,51,50,14,BS_BITMAP
+    PUSHBUTTON      "Flip",IDC_BUTTON_FLIP,137,68,50,28,BS_BITMAP
+    DEFPUSHBUTTON   "OK",IDOK,49,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,153,50,14
+    CONTROL         "",IDC_STATIC_PREVIEW,"Static",SS_BITMAP | 
+                    SS_CENTERIMAGE,7,24,125,125,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_EDIT_FILENAME,7,7,180,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Rotate 90°\nCounter Clockwise",
+                    IDC_BUTTON_ROTATE_COUNTER,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,137,24,24,24
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "BackgroundRandomizer MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "BackgroundRandomizer\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "BackgroundRandomizer.EXE\0"
+            VALUE "ProductName", "BackgroundRandomizer Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_BACKGROUNDRANDOMIZER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_DIALOG_BG_RAND_PARENT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 4
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 2
+    END
+
+    IDD_DIALOG_MANAGE_BLOCKED_IMAGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_DIALOG_ADJUST_IMAGE_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_BACKGROUNDRANDOMIZER_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_ASPECT_RATIO_MODE, 0x403, 41, 0
+0x7547, 0x7261, 0x6e61, 0x6574, 0x2065, 0x6e45, 0x6974, 0x6572, 0x4920, 
+0x616d, 0x6567, 0x4120, 0x7070, 0x6165, 0x7372, 0x4f20, 0x206e, 0x6353, 
+0x6572, 0x6e65, "\000" 
+    IDC_COMBO_ASPECT_RATIO_MODE, 0x403, 25, 0
+0x7547, 0x7261, 0x6e61, 0x6574, 0x2065, 0x6544, 0x6b73, 0x6f74, 0x2070, 
+0x6946, 0x6c6c, 0x6465, "\000" 
+    IDC_COMBO_ASPECT_RATIO_MODE, 0x403, 8, 0
+0x7641, 0x7265, 0x6761, 0x0065, 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 13, 0
+0x7453, 0x7261, 0x7574, 0x2070, 0x6e4f, 0x796c, "\000" 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 11, 0
+0x3531, 0x4d20, 0x6e69, 0x7475, 0x7365, "\000" 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 11, 0
+0x3033, 0x4d20, 0x6e69, 0x7475, 0x7365, "\000" 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 7, 0
+0x2031, 0x6f48, 0x7275, "\000" 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 8, 0
+0x2032, 0x6f48, 0x7275, 0x0073, 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 8, 0
+0x2034, 0x6f48, 0x7275, 0x0073, 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 8, 0
+0x2038, 0x6f48, 0x7275, 0x0073, 
+    IDC_COMBO_BACKGROUND_INTERVAL, 0x403, 24, 0
+0x3432, 0x4820, 0x756f, 0x7372, 0x2d20, 0x4f20, 0x636e, 0x2065, 0x6550, 
+0x2072, 0x6144, 0x0079, 
+    IDC_COMBO_AUTO_ROTATE_TO_MATCH_SCREEN, 0x403, 14, 0
+0x6f44, 0x4e20, 0x746f, 0x5220, 0x746f, 0x7461, 0x0065, 
+    IDC_COMBO_AUTO_ROTATE_TO_MATCH_SCREEN, 0x403, 10, 0
+0x6c43, 0x636f, 0x776b, 0x7369, 0x0065, 
+    IDC_COMBO_AUTO_ROTATE_TO_MATCH_SCREEN, 0x403, 17, 0
+0x6f43, 0x6e75, 0x6574, 0x6372, 0x6f6c, 0x6b63, 0x6977, 0x6573, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TRAY_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Change Image Now",            ID_MENU_CHANGEIMAGENOW
+        MENUITEM SEPARATOR
+        MENUITEM "Adjust Current Image",        ID_MENU_ADJUSTCURRENTIMAGE
+        MENUITEM "Don't Show Current Image Again", 
+                                                ID_MENU_DONTSHOWTHISIMAGEAGAIN
+
+        MENUITEM SEPARATOR
+        MENUITEM "Slide Show",                  ID_MENU_SLIDESHOW
+        MENUITEM SEPARATOR
+        MENUITEM "Settings",                    ID_MENU_SETTINGS
+        MENUITEM "Register",                    ID_MENU_REGISTRATION
+        MENUITEM "About",                       ID_MENU_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_MENU_TERMINATE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_CREDIT_CARDS BITMAP  DISCARDABLE     "res\\creditcards.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About BackgroundRandomizer..."
+    IDS_STRING_REGCOST_NEW  "Registration costs $8."
+    IDS_STRING_EXPIRATION_TRIAL 
+                            "Background Randomizer is shareware.  It has a 30 day trial.  After 30 days, Background Randomizer will be disabled.  In order to re-enable it, you must obtain a registration code."
+    IDS_THANK_YOU           "Thank you for registering Background Randomizer.\n\nYou are now entitled to free updates forever!"
+    IDS_INVALID_USERNAME_LICENSE 
+                            "Invalid License Information has been entered.\n\nPlease try again."
+    IDS_FAILURE_GETWINDIR   "FATAL ERROR: System Problem."
+    IDS_REGISTRY_KEY        "SOFTWARE\\unHUman Software\\BackgroundRandomizer"
+    IDS_TRIAL_NOTICE        "Background Randomizer trial expires in %d days."
+    IDS_EXPIRED_NOTICE      "The 30 day trial of Background Randomizer has expired."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BackgroundRandomizer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
